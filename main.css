@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 10px;
+  background: linear-gradient(135deg, #153677, #4e085f);
+}
+.todoapp {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+.todoappsec {
+  display: flex;
+}
+.todoapp h2 {
+  color: #002765;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.todoapp h3 {
+  color: #002765;
+  font-size: 25px;
+  font-weight: 700;
+  background-image: linear-gradient(to right, blue, pink);
+  margin-bottom: 30px;
+  margin-left: 260px;
+  background-clip: inherit;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.logo {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+}
+#form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  text-align: left;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+#form #addbutton {
+  border: none;
+  outline: none;
+  padding: 20px;
+  background: #ff5945;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100px;
+  border-radius: 40px;
+}
+#input-box {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-weight: 14px;
+}
+input {
+  padding-left: 50px;
+  padding-top: 15px;
+  border: none;
+  outline: none;
+}
+
+#list-container .task {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 30px;
+}
+.task .content {
+  position: relative;
+}
+.task .content::before {
+  content: "";
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid blue;
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+
+.task .content .done::before {
+  background-color: blue;
+}
+
+#list-container .task .content .text {
+  color: grey;
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+#list-container .task .content .text:not(:read-only) {
+  color: black;
+}
+#list-container .task .action {
+  display: flex;
+  margin: 0 -0.5rem;
+}
+.task .action .donebutton {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  transition: 1.2s;
+}
+.task .action .donebutton {
+  color: green;
+}
+.task .action .editbutton {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  transition: 1.2s;
+}
+.task .action .editbutton {
+  color: blue;
+}
+.task .action .deletebutton {
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 700;
+  transition: 1.2s;
+}
+.task .action .deletebutton {
+  color: red;
+}
+.task .action .editbutton:hover {
+  background-color: blue;
+  color: white;
+}
+.task .action .deletebutton:hover {
+  background-color: red;
+  color: white;
+}
+.task .action .donebutton:hover {
+  background-color: green;
+  color: white;
+}
